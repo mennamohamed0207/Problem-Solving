@@ -17,8 +17,6 @@ Input: root = [1]
 Output: [1]
 */
 
-
-
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -30,23 +28,25 @@ Output: [1]
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    Solution(){
+    Solution()
+    {
         vector<int> result;
     }
     vector<int> result;
 
-    vector<int> inorderTraversal(TreeNode* root) {
-       if(root == nullptr)
-       {
+    vector<int> inorderTraversal(TreeNode *root)
+    {
+        if (root == nullptr)
+        {
             return result;
-       }
-       
-       inorderTraversal((root->left));
+        }
+
+        inorderTraversal((root->left));
         result.push_back(root->val);
-        
-       
+
         inorderTraversal((root->right));
         return result;
     }
