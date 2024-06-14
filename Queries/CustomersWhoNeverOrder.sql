@@ -59,7 +59,6 @@ Output:
 | Max       |
 +-----------+
 */
-
 SELECT name as Customers
 FROM Customers
 WHERE Customers.id  not IN
