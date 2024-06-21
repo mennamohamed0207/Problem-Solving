@@ -52,3 +52,29 @@ public:
         return result;
     }
 };
+
+
+//optimal solution 
+class Solution {
+public:
+    long long countCompleteDayPairs(vector<int>& hours) {
+       std::unordered_map<long long, long long> remainder_count;
+        long long pairs = 0;
+        long long complete_day = 24;
+
+        for (long long hour : hours) {
+            long long remainder = hour % complete_day;
+            long long complement = (complete_day - remainder) % complete_day;
+            
+            // If complement has been seen before, it forms a pair
+            if (remainder_count.find(complement) != remainder_count.end()) {
+                pairs += remainder_count[complement];
+            }
+
+            // Increase the count of the current remainder
+            remainder_count[remainder]++;
+        }
+
+        return pairs;
+    }
+};
