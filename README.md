@@ -1,13 +1,13 @@
 # Resources
 ## Linkedin Post on specific topics
-😍 150 questions on stack DS
-https://lnkd.in/dTPCCb9a
+😍 150 questions on stack DS<br/>
+https://lnkd.in/dTPCCb9a<br/>
 🤔 42 questions on queue
 https://lnkd.in/dpXhUqEZ
 😙 Questions on arrays | very important
 https://lnkd.in/d82WxKAB
 😙 Questions on strings | very important
-[text](https://leetcode.com/tag/string/)
+https://leetcode.com/tag/string/
 ودول مجموعة مسائل شرحتها ليكوا حاولوا تبدأوا بيها عشان تعرف ازاي تستخدم ليت كود وكمان طريقة الشخبطة والتفكير في الحل 😄 
 😎 Problem Solving | 001#Design Browser History
 https://lnkd.in/dwPuDNBP
