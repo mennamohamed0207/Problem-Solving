@@ -6,6 +6,8 @@ https://lnkd.in/dTPCCb9a
 https://lnkd.in/dpXhUqEZ
 😙 Questions on arrays | very important
 https://lnkd.in/d82WxKAB
+😙 Questions on strings | very important
+[text](https://leetcode.com/tag/string/)
 ودول مجموعة مسائل شرحتها ليكوا حاولوا تبدأوا بيها عشان تعرف ازاي تستخدم ليت كود وكمان طريقة الشخبطة والتفكير في الحل 😄 
 😎 Problem Solving | 001#Design Browser History
 https://lnkd.in/dwPuDNBP

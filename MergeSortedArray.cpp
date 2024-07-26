@@ -39,6 +39,7 @@ nums2.length == n
 
 Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 */
+//Beats 7.5%
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
@@ -76,5 +77,19 @@ public:
         {
             nums1[i]=nums[i];
         }
+    }
+};
+
+//Beats 100%
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int j=0;
+       for(int i=m;i<n+m;i++)
+       {
+        nums1[i]=nums2[j];
+        j++;
+       }
+       sort(nums1.begin(),nums1.end());
     }
 };
