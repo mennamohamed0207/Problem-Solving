@@ -20,6 +20,8 @@ Constraints:
 The given address is a valid IPv4 address.
  */
 //Beats 100%
+#include <string>
+using namespace std;
 class Solution {
 public:
     string defangIPaddr(string address) {

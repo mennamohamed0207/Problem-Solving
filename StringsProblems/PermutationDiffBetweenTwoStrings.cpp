@@ -40,6 +40,9 @@ t is a permutation of s.
 s consists only of lowercase English letters.
 */
 //Beats 100%
+#include<string>
+#include<cmath>
+using namespace std;
 class Solution {
 public:
     int findPermutationDifference(string s, string t) {
