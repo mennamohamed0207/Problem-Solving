@@ -68,3 +68,31 @@ public:
             return distinct[k - 1];
     }
 };
+//Beats 37%
+class Solution {
+public:
+    string kthDistinct(vector<string>& arr, int k) {
+        unordered_map<string,int>map;
+        for(int i=0;i<arr.size();i++)
+        {
+            map[arr[i]]++;
+        }
+        vector<string> distinct;
+        for(int i=0;i<arr.size();i++)
+        {
+            if(map[arr[i]]==1)
+            {
+                distinct.push_back(arr[i]);
+                cout<<arr[i]<<" ";
+            }
+        }
+        if(k<=distinct.size())
+        {
+            return distinct[k-1];
+
+        }else{
+            return "";
+        }
+       
+    }
+};
