@@ -36,3 +36,23 @@ public:
         return count;
     }
 };
+/*
+Learned from this problem: 
+std::count() returns the number of occurrences of an element in a given range. Returns the number of elements in the range [first, last) that compare equal to val.
+Example:
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int arr[] = { 3, 2, 1, 3, 3, 5, 3 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout <<
+ 
+        "  Number of times 3 appears : "
+    << count(arr, arr + n, 3);
+ 
+    return 0;
+}
+
+*/
