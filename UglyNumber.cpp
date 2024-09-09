@@ -27,7 +27,10 @@ Constraints:
 -231 <= n <= 231 - 1
 */
 //Beat 24.25%
-
+#include <vector>
+#include <iostream>
+#include <cmath>
+using namespace std;
 class Solution {
 public:
    vector<int> primeFactors(int n) {
