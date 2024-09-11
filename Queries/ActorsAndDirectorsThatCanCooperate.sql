@@ -8,7 +8,7 @@
 -- | timestamp   | int     |
 -- +-------------+---------+
 -- timestamp is the primary key (column with unique values) for this table.
- 
+
 
 -- Write a solution to find all the pairs (actor_id, director_id) where the actor has cooperated with the director at least three times.
 
@@ -16,7 +16,7 @@
 
 -- The result format is in the following example.
 
- 
+
 
 -- Example 1:
 
