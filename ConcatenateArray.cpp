@@ -29,6 +29,7 @@ n == nums.length
 1 <= n <= 1000
 1 <= nums[i] <= 1000
 */
+//Beats 29%
 class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
@@ -41,6 +42,21 @@ public:
         {
             ans.push_back(nums[i]);
         }
+        return ans;
+    }
+};
+//Beats 90%
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int>& nums) {
+        vector<int>ans(2*nums.size());
+        int n=nums.size();
+        for(int i=0;i<nums.size();i++)
+        {
+            ans[i]=nums[i];
+            ans[i+n]=nums[i];
+        }
+        
         return ans;
     }
 };
