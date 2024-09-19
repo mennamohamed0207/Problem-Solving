@@ -30,6 +30,10 @@ Only one valid answer exists.
  
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?*/
+#include <bits/stdc++.h>
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
