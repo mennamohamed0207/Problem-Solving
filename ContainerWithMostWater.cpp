@@ -12,7 +12,7 @@ Return the maximum amount of water a container can store.
 
 Notice that you may not slant the container.
 
- 
+
 
 Example 1:
 
@@ -24,31 +24,33 @@ Example 2:
 
 Input: height = [1,1]
 Output: 1
- 
+
 
 Constraints:
 
 n == height.length
 2 <= n <= 105
 0 <= height[i] <= 104*/
-//Beats 99%
-class Solution {
+// Beats 99%
+class Solution
+{
 public:
-    int maxArea(vector<int>& height) {
+    int maxArea(vector<int> &height)
+    {
         int begin = 0;
         int end = height.size() - 1;
-        int maxArea=0;
-  
-        while (begin < end) {
-           int currentArea=min(height[begin],height[end])*(end-begin);
-           maxArea=max(maxArea,currentArea);
-                if (height[begin] < height[end])
-                    begin++;
-                else
-                    end--;
-           
+        int maxArea = 0;
+
+        while (begin < end)
+        {
+            int currentArea = min(height[begin], height[end]) * (end - begin);
+            maxArea = max(maxArea, currentArea);
+            if (height[begin] < height[end])
+                begin++;
+            else
+                end--;
         }
-       
+
         return maxArea;
     }
 };
