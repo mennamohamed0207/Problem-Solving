@@ -77,6 +77,8 @@ public:
             
             // Check if the current window's frequency map matches s1's frequency map
             if (s1_freq == s2_freq) {
+
+                
                 return true;
             }
         }
