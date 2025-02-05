@@ -1,25 +1,27 @@
 class Solution {
 public:
     bool areAlmostEqual(string s1, string s2) {
-        if(s1==s2) return true;
-        int diff=0;
-        unordered_map<char,int>s1_map;
-        unordered_map<char,int>s2_map;
-        for(int i=0;i<s1.length();i++)
-        {
-            s1_map[s1[i]]++;
-            s2_map[s2[i]]++;
+        int firstIndexDiff = 0;
+        int secondIndexDiff = 0;
+        int numDiffs = 0;
+        for (int i = 0; i < s1.size(); i++) {
+            if (s1[i] != s2[i]) {
+                numDiffs++;
+                // numDiffs is more than 2, one string swap will not make two
+                // strings equal
+                if (numDiffs > 2)
+                    return false;
+                else if (numDiffs == 1) {
+                    // store the index of first difference
+                    firstIndexDiff = i;
+                } else {
+                    // store the index of second difference
+                    secondIndexDiff = i;
+                }
+            }
         }
-        for(auto pair:s1_map)
-        {
-            if(s2_map[pair.first]!=pair.second)
-            return false;
-        }
-        for(int i=0;i<s1.length();i++)
-        {
-            if(s1[i]!=s2[i]) 
-                diff++;
-        }
-        return diff==2;
+        // check if swap is possible
+        return s1[firstIndexDiff] == s2[secondIndexDiff] &&
+               s1[secondIndexDiff] == s2[firstIndexDiff];
     }
 };
