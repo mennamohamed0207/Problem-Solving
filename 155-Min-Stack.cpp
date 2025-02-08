@@ -1,19 +1,21 @@
 class MinStack {
 public:
     stack<int>St;
-    vector<int>vec;
+    stack<int>minStack;
     MinStack() {
         
     }
     
     void push(int val) {
        St.push(val);
-
+        val=std::min(val,minStack.empty() ? val : minStack.top());
+        minStack.push(val);
 
     }
     
     void pop() {
         St.pop();
+        minStack.pop();
     }
     
     int top() {
@@ -21,23 +23,7 @@ public:
     }
     
     int getMin() {
-        stack<int> tmp;
-        int mini=St.top();
-        while(!St.empty())
-        {   
-            int place=St.top();
-            St.pop();
-            mini=min(mini,place);
-            tmp.push(place);
-
-        }
-        while(!tmp.empty())
-        {
-            int ret=tmp.top();
-            tmp.pop();
-            St.push(ret);
-        }
-        return mini;
+        return minStack.top();
        
     }
 };
